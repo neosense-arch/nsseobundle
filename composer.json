@@ -13,7 +13,7 @@
 		"php": ">=5.3.2"
 	},
 	"autoload": {
-		"psr-0": { "NS\\SEOBundle": "" }
+		"psr-0": { "NS\\SeoBundle": "" }
 	},
-	"target-dir": "NS/SEOBundle"
+	"target-dir": "NS/SeoBundle"
 }
