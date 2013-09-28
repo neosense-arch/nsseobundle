@@ -1,0 +1,8 @@
+parameters:
+    ns_seo.event.meta_rewriter_event_listener.class: 'NS\SeoBundle\Event\MetaRewriterEventListener'
+
+services:
+    ns_seo.event.meta_rewriter_event_listener:
+        class: %ns_seo.event.meta_rewriter_event_listener.class%
+        tags:
+            - { name: 'kernel.event_listener', event: 'ns_cms.after_page_render', method: 'onAfterPageRender' }
