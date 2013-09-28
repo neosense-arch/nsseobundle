@@ -11,5 +11,12 @@ use Doctrine\ORM\EntityRepository;
  */
 class MetaRepository extends EntityRepository
 {
-
+	/**
+	 * @param string $url
+	 * @return Meta|null
+	 */
+	public function findOneByUrl($url)
+	{
+		return $this->findOneBy(array('url' => $url));
+	}
 } 

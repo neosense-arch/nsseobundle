@@ -1,8 +1,19 @@
 parameters:
     ns_seo.event.meta_rewriter_event_listener.class: 'NS\SeoBundle\Event\MetaRewriterEventListener'
+    ns_seo.repository.meta.class:                    'NS\SeoBundle\Entity\MetaRepository'
+    ns_seo.repository.meta.factory_argument:         'NSSeoBundle:Meta'
 
 services:
     ns_seo.event.meta_rewriter_event_listener:
         class: %ns_seo.event.meta_rewriter_event_listener.class%
+        calls:
+            - [setMetaRepository, [@ns_seo.repository.meta]]
         tags:
             - { name: 'kernel.event_listener', event: 'ns_cms.after_page_render', method: 'onAfterPageRender' }
+
+    ns_seo.repository.meta:
+        class: %ns_seo.repository.meta.class%
+        factory_service: doctrine.orm.entity_manager
+        factory_method: getRepository
+        arguments:
+            - %ns_seo.repository.meta.factory_argument%
