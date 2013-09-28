@@ -1,0 +1,19 @@
+{
+	"name": "neosense/seo-bundle",
+	"type": "symfony-bundle",
+	"description": "NS SEO Bundle",
+	"keywords": ["seo"],
+	"license": "Proprietary",
+	"authors": [
+		{
+			"name": "Neosense"
+		}
+	],
+	"require": {
+		"php": ">=5.3.2"
+	},
+	"autoload": {
+		"psr-0": { "NS\\SEOBundle": "" }
+	},
+	"target-dir": "NS/SEOBundle"
+}
