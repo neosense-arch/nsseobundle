@@ -10,7 +10,8 @@
 		}
 	],
 	"require": {
-		"php": ">=5.3.2"
+		"php":                 ">=5.3.2",
+		"neosense/cms-bundle": ">=1.2.6"
 	},
 	"autoload": {
 		"psr-0": { "NS\\SeoBundle": "" }
