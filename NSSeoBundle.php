@@ -2,6 +2,7 @@
 
 namespace NS\SeoBundle;
 
+use NS\CoreBundle\Bundle\CoreBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -10,7 +11,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @package NS\SeoBundle
  */
-class NSSeoBundle extends Bundle
+class NSSeoBundle extends Bundle implements CoreBundle
 {
 	/**
 	 * @param ContainerBuilder $container
@@ -19,4 +20,14 @@ class NSSeoBundle extends Bundle
 	{
 		parent::build($container);
 	}
+
+    /**
+     * Retrieves human-readable bundle title
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return 'Модуль SEO';
+    }
 }

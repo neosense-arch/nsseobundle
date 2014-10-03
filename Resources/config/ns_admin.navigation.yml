@@ -1,0 +1,4 @@
+-
+    label: 'SEO'
+    name: 'ns_seo'
+    action: 'meta:index'

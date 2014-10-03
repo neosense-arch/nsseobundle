@@ -19,4 +19,12 @@ class MetaRepository extends EntityRepository
 	{
 		return $this->findOneBy(array('url' => $url));
 	}
+
+    /**
+     * @return Meta[]
+     */
+    public function findAll()
+    {
+        return $this->findBy(array(), array('url' => 'ASC'));
+    }
 } 
